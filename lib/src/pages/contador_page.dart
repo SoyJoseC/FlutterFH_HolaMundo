@@ -7,7 +7,7 @@ class ContadorPage extends StatefulWidget {
 
 class _ContadorPageState extends State<ContadorPage> {
   final estiloTexto = new TextStyle(
-    fontSize: 30,
+    fontSize: 31,
   );
 
   int _conteo = 10;
@@ -41,17 +41,24 @@ class _ContadorPageState extends State<ContadorPage> {
   Widget _crearBotones() {
     return Row(
       children: <Widget>[
-        SizedBox(width: 30.0, ),
+        SizedBox(
+          width: 30.0,
+        ),
         FloatingActionButton(
           child: Icon(Icons.exposure_zero),
           onPressed: _reset,
         ),
-        Expanded(child: SizedBox(width: 5.0, )),
+        Expanded(
+            child: SizedBox(
+          width: 5.0,
+        )),
         FloatingActionButton(
           child: Icon(Icons.remove),
           onPressed: _sustraer,
         ),
-        SizedBox(width: 5.0, ),
+        SizedBox(
+          width: 5.0,
+        ),
         FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: _agregar,
@@ -60,15 +67,15 @@ class _ContadorPageState extends State<ContadorPage> {
     );
   }
 
-  _agregar(){
+  _agregar() {
     setState(() => _conteo++);
   }
 
-  _sustraer(){
+  _sustraer() {
     setState(() => _conteo--);
   }
 
-  _reset(){
-    setState(()=> _conteo = 0);
+  _reset() {
+    setState(() => _conteo = 0);
   }
 }
